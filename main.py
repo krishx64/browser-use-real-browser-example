@@ -16,7 +16,7 @@ from browser_use import Agent, Browser, ChatGoogle, ChatOllama
 
 # Connect to your existing Chrome browser
 browser = Browser(
-	#windows path
+	# Windows path
     executable_path=r'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     user_data_dir=r'C:\\Users\\jaisw\\AppData\\Local\\Google\\Chrome\\User Data',
 	# MAC path
@@ -25,7 +25,7 @@ browser = Browser(
     profile_directory="Default", #chrome profile
 	dom_highlight_elements=True,
 	# keep_alive= True, #turn on if don't want to close browser after a task
-	# storage_state='./storage_state3.json' #if cookies not appear in the chrome session then enable this to use manual cookies inside the respective json
+	# storage_state='./storage_state3.json' # if cookies not appear in the chrome session then enable this to use manual cookies inside the respective json
 )
 
 
@@ -40,7 +40,7 @@ async def main():
 		browser=browser,
 	)
 	await agent.run()
-	# await browser.export_storage_state('storage_state3.json') save cookies from current session
+	# await browser.export_storage_state('storage_state3.json') #save cookies from current session
 
 
 if __name__ == '__main__':
